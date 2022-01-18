@@ -4,8 +4,9 @@
   "description": "This is online course product",
   "main": "index.js",
   "scripts": {
-    "build": "babel app.js -d dist",
-    "start": "npm run build && nodemon dist/app.js"
+    "dev": "nodemon --exec babel-node src/app.js",
+    "start": "babel-node src/app.js",
+    "build:doc": "./node_modules/.bin/apidoc - src/ -o ./doc -e node_modules/"
   },
   "repository": {
     "type": "git",
